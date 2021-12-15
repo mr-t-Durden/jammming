@@ -19,6 +19,10 @@ export class SearchBar extends React.Component {
         });
     }
 
+    componentDidUpdate() {
+        this.search()
+    }   //not part of the demanded tasks but necessary in my opinion (for test version)
+
     render() {
         return (
             <div className="SearchBar">
