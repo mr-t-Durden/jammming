@@ -1,5 +1,6 @@
 const CLIENT_ID = 'a6c71c4f23bb492f84fa798dd059b1b8';
 const REDIRECT_URI = 'http://localhost:3000/'
+// const REDIRECT_URI = 'http://jammmingff.surge.sh/'
 
 var accessToken = '';
 var expirationTime;
@@ -23,7 +24,8 @@ const Spotify = {
         } else if(url.includes('access_token')) {
             var hashParams = this.parseURL(url);
             accessToken = hashParams.access_token;
-            expirationTime = hashParams.expires_in;
+            expirationTime = Number(hashParams.expires_in);
+            console.log(`${expirationTime} vs ${expirationTime+2}`);
             window.setTimeout(() => accessToken = '', expirationTime*1000);
             window.history.pushState('Access Token', null, '/');
             return accessToken;
@@ -34,7 +36,7 @@ const Spotify = {
 
     search(searchTerm) {
         console.log('Start Search-Request')
-        const accessToken = this.getAccessToken();
+        const accessToken = Spotify.getAccessToken();
         console.log('curr URL: ' + window.location );
         return fetch(`https://api.spotify.com/v1/search?type=track&q=${searchTerm}`, {
             method: 'GET',
