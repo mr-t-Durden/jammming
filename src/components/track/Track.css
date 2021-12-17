@@ -12,6 +12,7 @@
     border: 0px;
     background-color: rgba(0, 0, 0, 0);
     color: #fff;
+    align-items: flex-end;
   }
   
   .Track-action:hover {
