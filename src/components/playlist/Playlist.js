@@ -1,6 +1,7 @@
 import React from "react";
 import './Playlist.css';
 import { TrackList } from "../tracklist/TrackList";
+import PropTypes from "prop-types";
 
 export class Playlist extends React.Component {
     constructor(props) {
@@ -15,13 +16,13 @@ export class Playlist extends React.Component {
     render() {
         return (
             <div className="Playlist">
-                <input  
-                    value={this.props.playlistName} 
-                    onChange={this.handleNameChange} 
+                <input
+                    value={this.props.playlistName}
+                    onChange={this.handleNameChange}
                 />
-                <TrackList 
-                    tracks={this.props.playlistTracks} 
-                    onRemove={this.props.onRemove} 
+                <TrackList
+                    tracks={this.props.playlistTracks}
+                    onRemove={this.props.onRemove}
                     isRemoval={true}
                 />
                 <button className={'Playlist-save'} onClick={this.props.onSave}>SAVE TO SPOTIFY</button>
@@ -29,3 +30,11 @@ export class Playlist extends React.Component {
         );
     }
 }
+
+Playlist.propTypes = {
+    playlistName: PropTypes.string.isRequired,
+    playlistTracks: PropTypes.array.isRequired, 
+    onRemove: PropTypes.func.isRequired,
+    onNameChange: PropTypes.func.isRequired,
+    onSave: PropTypes.func.isRequired
+};

@@ -1,5 +1,6 @@
 import React from "react";
 import './SearchBar.css';
+import PropTypes from 'prop-types';
 
 const searchTermKey = "searchTerm";
 
@@ -46,3 +47,6 @@ export class SearchBar extends React.Component {
     }
 }
 
+SearchBar.propTypes = {
+    onSearch: PropTypes.func.isRequired
+};

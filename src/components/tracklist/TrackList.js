@@ -1,6 +1,7 @@
 import React from "react";
 import './TrackList.css';
 import { Track } from "../track/Track";
+import PropTypes from "prop-types";
 
 export class TrackList extends React.Component {
     render() {
@@ -21,3 +22,9 @@ export class TrackList extends React.Component {
         );
     }
 }
+
+TrackList.propTypes = {
+    tracks: PropTypes.array,
+    onAdd: PropTypes.func,
+    isRemoval: PropTypes.bool.isRequired
+};
