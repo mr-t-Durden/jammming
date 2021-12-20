@@ -11,8 +11,8 @@ This feature accomplishes the following:
 -  Ensure successful first search (more accurate: search with the necessity of a redirect) without the need to repeat the input
 
 ### TECHNICAL DESIGN
-To store the inserted searchterm the sessionStorage should be used. The Implementation should follow the second example at this [side](https://developer.mozilla.org/de/docs/Web/API/Window/sessionStorage). 
-The conditional with the getItem-call should be placed in the in the ComponentDidMount()-method of Searchbar.js. Here also the searchTerm-state should be updated using setState() The conditional with setItem should be inserted in handleTermChange() in SearchBar.js. 
+To store the inserted searchterm the sessionStorage should be used. The Implementation should follow the second example at this [side](https://developer.mozilla.org/de/docs/Web/API/Window/sessionStorage) (siehe Screenshot). 
+The conditional with the `getItem`-call should be placed in the in the `ComponentDidMount()`-method of `Searchbar.js`. Here also the searchTerm-state should be updated using `setState()` The call of setItem should be inserted in `search()` in `App.js`. 
 
 ![Screenshot](./img/SessionStorage.png)
 
