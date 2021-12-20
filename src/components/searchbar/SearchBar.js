@@ -10,6 +10,7 @@ export class SearchBar extends React.Component {
         this.setState({searchTerm: ''});
         this.search = this.search.bind(this);
         this.handleTermChange = this.handleTermChange.bind(this);
+        this.componentDidMount = this.componentDidMount.bind(this);
     }
 
     componentDidMount() {
