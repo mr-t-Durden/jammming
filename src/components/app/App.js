@@ -12,7 +12,8 @@ class App extends React.Component {
     this.state = {
       searchResults: [],
       playlistName: 'My Playlist',
-      playlistTracks: []
+      playlistTracks: [],
+      client_id: ''
     };
     this.addTrack = this.addTrack.bind(this);
     this.removeTrack = this.removeTrack.bind(this);
@@ -60,6 +61,13 @@ class App extends React.Component {
   render() {
     return (
       <div>
+        <div className='clientIdInput-background'>
+          <input 
+            placeholder="Your Spotify Client-Id" 
+            onChange={(client_id) => {this.setState({client_id})}}
+            id="clientIdInput"    
+          />
+        </div>
         <h1>Ja<span className="highlight">mmm</span>ing</h1>
         <div className="App">
           <SearchBar onSearch={this.search} />

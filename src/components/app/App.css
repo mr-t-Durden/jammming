@@ -8,6 +8,17 @@ html {
   font-size: 18px;
 }
 
+.clientIdInput-background {
+  background-color: #010c3f;
+  border: 2px solid red;
+}
+
+input {
+  margin: 2px auto;
+  width: 80%;
+  display: block;  
+}
+
 h1 {
   padding: .77rem 0;
   background-color: #010c3f;
