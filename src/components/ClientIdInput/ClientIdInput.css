@@ -1,7 +1,21 @@
 .clientIdInput {
   background-color: #010c3f;
   border: 2px solid red;  
-  display: none;  
+  display: none;
+  width: 100%;  
+}
+
+a {
+  margin: 5px;
+  display: block;
+  text-align: center;
+  color: #6c41ec;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+a:hover {
+  text-decoration: none;
 }
 
 form {

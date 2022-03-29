@@ -84,7 +84,7 @@ class App extends React.Component {
   }
 
   missingClientIdAlert() {
-    alert('Enter Client-ID of your Spotify-Account!')
+    alert('Enter Client-ID of your Spotify-Registration!')
   }
 
   componentDidMount() {
