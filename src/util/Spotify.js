@@ -7,6 +7,10 @@ var expirationTime;
 
 const Spotify = {
 
+    getClientId() {
+        return sessionStorage.getItem('USER_CLIENT_ID');
+    },
+
     parseURL(url) {
         var hashParams = {};
         var e;
@@ -29,7 +33,8 @@ const Spotify = {
             window.history.pushState('Access Token', null, '/');
             return accessToken;
         } else {
-            window.location = `https://accounts.spotify.com/authorize?client_id=${CLIENT_ID}&response_type=token&scope=playlist-modify-public&redirect_uri=${REDIRECT_URI}`;
+            console.log(`Order Access Token for ClientId ${Spotify.getClientId()}`);
+            window.location = `https://accounts.spotify.com/authorize?client_id=${Spotify.getClientId()}&response_type=token&scope=playlist-modify-public&redirect_uri=${REDIRECT_URI}`;
         }
     },
 

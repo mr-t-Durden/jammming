@@ -1,0 +1,25 @@
+.clientIdInput {
+  background-color: #010c3f;
+  border: 2px solid red;  
+  display: none;  
+}
+
+form {
+  margin: auto;
+  width: 80%;
+}
+
+input {
+  margin: 10px 20px;
+  font-size: 1rem;
+}
+
+input[type=text] {
+    margin: 2px auto;
+    width: 70%;
+    font-size: 1rem;
+}
+
+input[type=submit] {
+  cursor: pointer;
+}
