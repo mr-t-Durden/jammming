@@ -1,8 +1,5 @@
-if (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') {
-    const REDIRECT_URI = 'http://localhost:3000/'
-} else {
-    const REDIRECT_URI = 'https://mr-t-durden.github.io/jammming/'
-}
+const REDIRECT_URI_PROD = 'https://mr-t-durden.github.io/jammming/';
+const REDIRECT_URI_DEV = 'http://localhost:3000/';
 
 var accessToken = '';
 var expirationTime;
@@ -36,6 +33,7 @@ const Spotify = {
             return accessToken;
         } else {
             console.log(`Order Access Token for ClientId ${Spotify.getClientId()}`);
+            const REDIRECT_URI = (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') ? REDIRECT_URI_DEV : REDIRECT_URI_PROD;
             window.location = `https://accounts.spotify.com/authorize?client_id=${Spotify.getClientId()}&response_type=token&scope=playlist-modify-public&redirect_uri=${REDIRECT_URI}`;
         }
     },
