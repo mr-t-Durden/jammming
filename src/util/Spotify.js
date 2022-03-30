@@ -1,5 +1,8 @@
-const REDIRECT_URI = 'http://localhost:3000/'
-// const REDIRECT_URI = 'http://jammmingff.surge.sh/'
+if (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') {
+    const REDIRECT_URI = 'http://localhost:3000/'
+} else {
+    const REDIRECT_URI = 'https://mr-t-durden.github.io/jammming/'
+}
 
 var accessToken = '';
 var expirationTime;
