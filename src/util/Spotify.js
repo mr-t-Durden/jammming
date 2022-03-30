@@ -1,4 +1,3 @@
-const CLIENT_ID = 'a6c71c4f23bb492f84fa798dd059b1b8';
 const REDIRECT_URI = 'http://localhost:3000/'
 // const REDIRECT_URI = 'http://jammmingff.surge.sh/'
 
