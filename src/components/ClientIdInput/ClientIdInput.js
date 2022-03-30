@@ -29,11 +29,11 @@ export class ClientIdInput extends React.Component {
     render() {
         return (
             <div className='clientIdInput'>
-                <a href="https://developer.spotify.com/my-applications/#!/applications" target='_blank'>Setup Spotify integration to get Client-Id</a>
+                <a href="https://developer.spotify.com/my-applications/#!/applications" target='_blank'>Setup Spotify integration to get Client ID</a>
                 <form onSubmit={this.handleClientIdSubmit}>
                     <input
                         type='text' 
-                        placeholder="Your Spotify Client-Id" 
+                        placeholder="Your Spotify Client ID" 
                         id="clientIdInput"
                         pattern="[\d\w]{32}"
                         onChange={this.handleClientIdChange}
